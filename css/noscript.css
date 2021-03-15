@@ -1,0 +1,39 @@
+/*
+	Fractal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Header */
+.err {
+  padding: 1em 1em 1em 3em;
+  border-radius: 1em;
+  background-color: #f88;
+  color: #222;
+}
+
+.res {
+  padding: 1em 1em 1em 1.5em;
+  border-radius: 1em;
+  background-color: rgb(42, 199, 37);
+  color: #222;
+}
+	body.is-preload #header .content {
+		-moz-transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+
+	body.is-preload #header .image {
+		-moz-transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+
+		body.is-preload #header .image img {
+			opacity: 1;
+		}
