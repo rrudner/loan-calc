@@ -2,11 +2,12 @@
 
 require_once dirname(__FILE__) . '/../config.php';
 
-//include _ROOT_PATH . '/app/security/check.php';
+require_once $conf->root_path.'/app/CalcCtrl.class.php';
 
-require_once _ROOT_PATH.'/libs/smarty/Smarty.class.php';
+$ctrl = new CalcCtrl();
+$ctrl->process();
 
-
+/*
 function getParams(&$form) {
     $form['amount'] = isset($_REQUEST ['amount']) ? $_REQUEST['amount'] : null;
 	$form['years'] = isset($_REQUEST ['years']) ? $_REQUEST['years'] : null;
@@ -66,8 +67,8 @@ if(validate($form,$messages)){
 
 $smarty = new Smarty();
 
-$smarty->assign('app_url',_APP_URL);
-$smarty->assign('root_path',_ROOT_PATH);
+$smarty->assign('app_url',$conf->app_url);
+$smarty->assign('root_path',$conf->root_path);
 $smarty->assign('page_title','Credit-Calc');
 $smarty->assign('page_description','Profesjonalne szablonowanie oparte na bibliotece Smarty');
 $smarty->assign('page_header','Szablony Smarty');
@@ -78,4 +79,5 @@ $smarty->assign('result',$result);
 $smarty->assign('messages',$messages);
 
 // 5. Wywołanie szablonu
-$smarty->display(_ROOT_PATH.'/app/calc_view.tpl');
+$smarty->display($conf->root_path.'/app/calc_view.tpl');
+*/
