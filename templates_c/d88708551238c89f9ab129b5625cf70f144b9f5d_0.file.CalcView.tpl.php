@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2021-04-12 20:28:02
+/* Smarty version 3.1.30, created on 2021-04-26 15:49:09
   from "C:\xampp\htdocs\loan-calc\app\views\CalcView.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_607491326f2901_42694039',
+  'unifunc' => 'content_6086c4d53154e1_99208271',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd88708551238c89f9ab129b5625cf70f144b9f5d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\loan-calc\\app\\views\\CalcView.tpl',
-      1 => 1618252080,
+      1 => 1619444945,
       2 => 'file',
     ),
   ),
@@ -22,19 +22,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:messages.tpl' => 1,
   ),
 ),false)) {
-function content_607491326f2901_42694039 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6086c4d53154e1_99208271 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_841150868607491326f20f2_98302887', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17874515726086c4d53130f8_63100162', 'content');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:main.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'content'} */
-class Block_841150868607491326f20f2_98302887 extends Smarty_Internal_Block
+class Block_17874515726086c4d53130f8_63100162 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -45,6 +45,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 	<a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 logout"  class="pure-button pure-button-primary">wyloguj: <?php echo $_smarty_tpl->tpl_vars['user']->value->login;?>
 </a>
+	<a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+showTable"  class="pure-button pure-button-primary">tabela</a>
 	</span>
 </div>
 

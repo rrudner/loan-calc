@@ -5,6 +5,7 @@
 <div class="pure-menu pure-menu-horizontal bottom-margin">
 <span style="float:right;">
 	<a href="{$conf->action_url}logout"  class="pure-button pure-button-primary">wyloguj: {$user->login}</a>
+	<a href="{$conf->action_url}showTable"  class="pure-button pure-button-primary">tabela</a>
 	</span>
 </div>
 

@@ -76,6 +76,19 @@ class CalcCtrl {
 				
 			//wykonanie operacji
 			$this->result->result = ($this->form->amount / ($this->form->years * 12)) + ($this->form->amount / ($this->form->years * 12) * ($this->form->interest / 100));
+
+			try {
+                getDB() -> insert("table_calc", [
+                    "amount" => $this -> form -> amount,
+                    "interest" => $this -> form -> interest,
+                    "years" => $this -> form -> years,
+                    "result" => $this -> result -> result,
+                    "date" => date("Y-m-d H:i:s")
+                ]);
+
+            } catch (\PDOException $ex) {
+                getMessages() -> addError("DB Error: ".$ex -> getMessage());
+            }
 			
 			getMessages()->addInfo('Wykonano obliczenia.');
 		}

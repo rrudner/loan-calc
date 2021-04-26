@@ -48,9 +48,30 @@ function &getRouter(): core\Router {
     global $router; return $router;
 }
 
+$db = null;
+function &getDB() {
+	global $conf, $db;
+	if (!isset($db)) {
+		require_once 'lib/Medoo/Medoo.class.php';
+		$db = new \Medoo\Medoo([
+			'database_type' => &$conf -> db_type,
+			'database_name' => &$conf -> db_name,
+			'server' => &$conf -> db_server,
+			'username' => &$conf->db_user,
+			'password' => &$conf->db_pass,
+			'charset' => &$conf->db_charset,
+			'collation' => &$conf -> db_collation,
+			'port' => &$conf->db_port,
+			'option' => &$conf->db_option
+		]);
+	}
+	return $db;
+}
+
 require_once 'core/functions.php';
 
 session_start(); //uruchom lub kontynuuj sesję
 $conf->roles = isset($_SESSION['_roles']) ? unserialize($_SESSION['_roles']) : array(); //wczytaj role
 
 $router->setAction( getFromRequest('action') );
+
